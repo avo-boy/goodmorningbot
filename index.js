@@ -1,6 +1,8 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
 var greetings = ['Good morning','How did you sleep','Early bird catches the worm','"Good morning"',"Fixed your sleeping habit I see","Hey! Oh it's just you","Gaming time","Brush your teeth dammit"];
+var sadSpoon = ['','','',''];
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -13,10 +15,21 @@ client.on('message', msg => {
       if (msgContent == "good morning" || msgContent == "goodmornin" || msgContent == "goodmorning" || msgContent == "morning" || msgContent == "mornin" || msgContent == "gmornin" || msgContent == "gm") {
         const channel = client.channels.cache.get("711852497408360578");
         var r = Math.floor(Math.random() * greetings.length);
-        channel.send(`${greetings[r]}, ${msg.author}`);
+
+        if (msg.author.id = "221604543828459520") {
+          var r2 = Math.random();
+          if (r2 <0.8) {
+            channel.send(`${sadSpoon}, ${msg.author}`);
+          } else{
+            channel.send(`${greetings[r]}, ${msg.author}`);
+          }
+
+        } else {
+          channel.send(`${greetings[r]}, ${msg.author}`);
+        }
       }
     }
   }
 });
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.TOKEN);
