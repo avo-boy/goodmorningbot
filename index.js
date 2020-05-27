@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var greetings = ['Good morning', 'How did you sleep', 'Early bird catches the worm', '"_Good morning_"', "Fixed your sleeping habit I see", "Hey! Oh it's just you", "Gaming time", "Brush your teeth dammit"];
+var greetings = ['Good morning', 'How did you sleep', 'Early bird catches the worm', '"_Good morning_"', "Fixed your sleeping habit I see", "Hey! Oh it's just you", "Gaming time", "Brush your teeth dammit","I feel like you might have not gone to bed yet"];
 var sadSpoon = ['Sorry if I hurt your feelings', 'Hey! Well done for being up', 'Sssh! The baby might still be sleeping, oh wait. You are the baby', 'uwu sowwi 4 hurtin ur feelings uwu'];
 
 client.on('ready', () => {
